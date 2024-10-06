@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 function Navigation({ showMenu }) {
     return (
         <nav
-            className={`lg:block w-64 transform lg:translate-x-0 lg:opacity-100  ${
+            className={`fixed top--10 left-0 h-full w-64 bg-gray-900 shadow-lg p-6 transition-transform duration-300 ease-in-out z-50 lg:static lg:transform-none lg:opacity-100 ${
                 showMenu
                     ? "translate-x-0 opacity-100"
                     : "-translate-x-full opacity-0"
-            } bg-gray-900 p-6 shadow-lg transition-all duration-300 ease-in-out`}>
+            }`}>
             <ul className="space-y-4">
                 <li>
                     <Link

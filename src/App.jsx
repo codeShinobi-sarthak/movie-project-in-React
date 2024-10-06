@@ -1,6 +1,5 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import { useState } from "react";
+import React, { useState } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Navigation from "./components/Navigation";
 import Home from "./pages/Home";
@@ -22,20 +21,22 @@ const App = () => {
     };
 
     const handleNav = () => {
-        showMenu ? setShowMenu(false) : setShowMenu(true);
+        setShowMenu(!showMenu); // Toggle the menu visibility
     };
 
     return (
         <Router>
-            <div className="flex flex-col h-screen">
+            <div className="flex flex-col min-h-screen">
                 {/* Pass search handler to Header */}
-                <Header
-                    onSearch={handleSearch}
-                    handleNav={handleNav}
-                />
+                <Header onSearch={handleSearch} handleNav={handleNav} />
+
+                {/* Responsive Layout */}
                 <div className="flex flex-1">
+                    {/* Navigation Menu */}
                     <Navigation showMenu={showMenu} />
-                    <main className="flex-1">
+
+                    {/* Main Content */}
+                    <main className="flex-1 p-4 md:p-8 bg-gray-100">
                         <Routes>
                             <Route
                                 path="/"
@@ -64,6 +65,8 @@ const App = () => {
                         </Routes>
                     </main>
                 </div>
+
+                {/* Footer */}
                 <Footer />
             </div>
         </Router>

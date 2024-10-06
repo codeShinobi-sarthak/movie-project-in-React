@@ -26,7 +26,3 @@ This project gave me hands-on experience with:
 - **Benefits of Vite**: I explored how Vite optimizes development by providing instant server start times, better support for modern JavaScript, and lightning-fast HMR.
 - **Working with TMDb API**: I integrated the TMDb API to fetch real-time movie data, learning how to handle API requests, manage asynchronous data, and display results within the application.
 - **Building and Deploying**: This project helped me practice the full lifecycle of a React app—from development, code quality management, to deployment for a live audience.
-
----
-
-This project has deepened my understanding of how to structure and deploy a real-world web application efficiently.

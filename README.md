@@ -4,7 +4,7 @@ This project is a **movie application** developed using **React** and **Vite**. 
 
 ## Live Demo
 
-You can explore the live demo of the application [here](https://your-live-demo-link.com).
+You can explore the live demo of the application [here](https://movie-project-codeshinobi.netlify.app/).
 
 ## Technologies Used
 

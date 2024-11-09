@@ -27,19 +27,25 @@ const Header = ({ onSearch, handleNav }) => {
                     {/* Mobile Menu Button */}
                     <button
                         className="md:hidden block"
-                        onClick={handleNav}
-                    >
-                        <img className="w-8 h-8" src={menu} alt="menu" />
+                        onClick={handleNav}>
+                        <img
+                            className="w-8 h-8"
+                            src={menu}
+                            alt="menu"
+                        />
                     </button>
 
                     {/* Logo */}
-                    <img className="w-12 h-12" src={logo} alt="logo" />
+                    <img
+                        className="md:w-12 md:h-12 w-0 "
+                        src={logo}
+                        alt="logo"
+                    />
 
                     {/* App Name: Hidden on small screens */}
                     <Link
                         to="/"
-                        className="hidden md:block text-2xl font-bold text-white hover:text-gray-400 transition-colors duration-300"
-                    >
+                        className="hidden md:block text-2xl font-bold text-white hover:text-gray-400 transition-colors duration-300">
                         Cinema Guide
                     </Link>
                 </div>
@@ -47,19 +53,17 @@ const Header = ({ onSearch, handleNav }) => {
                 {/* Right Section: Search Bar (Mobile and Desktop) */}
                 <form
                     onSubmit={handleSubmit}
-                    className="flex w-full max-w-sm md:max-w-lg lg:max-w-xl bg-[#1f2123] rounded-full"
-                >
+                    className="flex w-full max-w-sm md:max-w-lg lg:max-w-xl bg-[#1f2123] rounded-full">
                     <input
                         type="text"
                         placeholder="Search for a movie"
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
-                        className="flex-grow px-4 py-2 text-base sm:text-lg text-gray-300 bg-transparent outline-none rounded-l-full"
+                        className="flex-grow flex-shrink px-4 py-2 text-base sm:text-lg text-gray-300 bg-transparent outline-none rounded-l-full"
                     />
                     <button
                         type="submit"
-                        className="flex items-center justify-center p-2 sm:p-4 rounded-r-full hover:bg-gray-700 transition-colors duration-300"
-                    >
+                        className="flex items-center justify-center p-2 sm:p-4 rounded-r-full hover:bg-gray-700 transition-colors duration-300">
                         <img
                             src={searchIcon}
                             alt="search-icon"
